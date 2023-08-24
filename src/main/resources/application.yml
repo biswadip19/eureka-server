@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: eureka-discovery-server
+server:
+  port: ${port:8080}
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+#    serviceUrl:
+#      defaultZone: ${EUREKA_SERVER_ADDRESS}
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

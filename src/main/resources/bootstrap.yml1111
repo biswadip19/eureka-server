@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: eureka
+server:
+  port: 8761
+eureka:
+   client:
+     register-with-eureka: false
+     fetch-registry: false
+     serviceUrl:
+      defaultZone: ${EUREKA_SERVER_ADDRESS}/eureka/
+   server:
+     waitTimeInMsWhenSyncEmpty: 0
+   instance:
+      prefer-ip-address: true
